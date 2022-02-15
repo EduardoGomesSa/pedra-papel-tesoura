@@ -4,53 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JoKePo</title>
-    <style>
-        main{
-            display: block;
-            position: relative;
-            left: 75px;
-            text-align: center;
-        }
-        fieldset{
-            width: 450px;
-            height: 450px;
-            position: relative;
-            left: 420px;
-        }
-        fieldset legend{
-            font: normal 25pt 'Chiller';
-        }
-        div#jogadas{
-            display: block;
-            position: relative;
-            width: 400px;
-            height: 100px;
-        }
-        div.d1{
-         float: right;
-         width: 100px;
-         height: 100px;  
-        }
-        div#auxiliar{
-            float: left;
-        }
-        div.d2{
-         float: right;
-         width: 100px;
-         height: 100px;
-         margin-left: 50px;  
-        }
-        div.d3{
-         float: left;
-         width: 100px;
-         height: 100px;  
-        }
-        figure img{
-            width: 75px;
-            height: 75px;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="_css/style.css">
 </head>
 <body>
     <main>
@@ -67,20 +21,20 @@
             </figure>
             <div id="jogadas">
                 <div class="d1">
-                    <figure onclick="jogar3(3)" id="v3">
+                    <figure onclick="jogar(3)" id="v3">
                         <img src="img/tesoura.png" alt="">
                         <figcaption>Tesoura</figcaption>
                     </figure>
                 </div>
                 <div id="auxiliar">
                     <div class="d2">
-                        <figure onclick="jogar2(2)" id="v2">
+                        <figure onclick="jogar(2)" id="v2">
                             <img src="img/papel.png" alt="">
                             <figcaption>Papel</figcaption>
                         </figure>
                     </div>
                     <div class="d3">
-                        <figure onclick="jogar1(1)" id="v1">
+                        <figure onclick="jogar(1)" id="v1">
                             <img src="img/pedra.png" alt="">
                             <figcaption>Pedra</figcaption>
                         </figure>
@@ -89,94 +43,6 @@
             </div>
         </fieldset>
     </main>
-    <script>
-        function jogar1(r){
-            var p1 = parseInt(r)
-            var i1 = document.getElementById('jog')
-            var j1 = document.getElementById('jog1')
-            var i2 = document.getElementById('img')
-            var min = Math.ceil(1);
-            var max = Math.floor(4);
-            var p2 = Math.floor(Math.random() * (max - min)) + min;
-            if((p1==1)&&(p2==3)){
-                i1.src = 'img/pedra.png'
-                j1.innerText = 'Pedra'
-                document.getElementById('img').src = 'img/tesoura.png';
-                document.getElementById('adv').innerText = 'Tesoura';
-                document.getElementById('res').innerText = 'Vc venceu!'
-                
-            }else if((p1==1)&&(p2==2)){
-                i1.src = 'img/pedra.png'
-                j1.innerText = 'Pedra'
-                i2.src = 'img/papel.png'
-                document.getElementById('adv').innerText = 'Papel';
-                document.getElementById('res').innerText = 'Vc perdeu!'
-            }else{
-                i1.src = 'img/pedra.png'
-                j1.innerText = 'Pedra'
-                i2.src = 'img/pedra.png'
-                document.getElementById('adv').innerText = 'Pedra';
-                document.getElementById('res').innerText = 'Empate!'
-            }
-        }
-        function jogar2(r){
-            var p1 = parseInt(r)
-            var i1 = document.getElementById('jog')
-            var j1 = document.getElementById('jog1')
-            var i2 = document.getElementById('img')
-            var min = Math.ceil(1);
-            var max = Math.floor(4);
-            var p2 = Math.floor(Math.random() * (max - min)) + min;
-            var p2 = Math.floor(Math.random() * (max - min)) + min;
-            if((p1==2)&&(p2==1)){
-                i1.src = 'img/papel.png'
-                j1.innerText = 'Papel'
-                i2.src = 'img/pedra.png'
-                document.getElementById('adv').innerText = 'Pedra';
-                document.getElementById('res').innerText = 'Vc venceu!'
-            }else if((p1==2)&&(p2==3)){
-                i1.src = 'img/papel.png'
-                j1.innerText = 'Papel'
-                i2.src = 'img/tesoura.png'
-                document.getElementById('adv').innerText = 'Tesoura';
-                document.getElementById('res').innerText = 'Vc Perdeu!'
-            }else{
-                i1.src = 'img/papel.png'
-                j1.innerText = 'Papel'
-                i2.src = 'img/papel.png'
-                document.getElementById('adv').innerText = 'Papel';
-                document.getElementById('res').innerText = 'Empate!'
-            }
-        }
-        function jogar3(r){
-            var p1 = parseInt(r)
-            var i1 = document.getElementById('jog')
-            var j1 = document.getElementById('jog1')
-            var i2 = document.getElementById('img')
-            var min = Math.ceil(1);
-            var max = Math.floor(4);
-            var p2 = Math.floor(Math.random() * (max - min)) + min;
-            var p2 = Math.floor(Math.random() * (max - min)) + min;
-            if((p1==3)&&(p2==2)){
-                i1.src = 'img/tesoura.png'
-                j1.innerText = 'Tesoura'
-                i2.src = 'img/papel.png'
-                document.getElementById('adv').innerText = 'Papel';
-                document.getElementById('res').innerText = 'Vc venceu!'
-            }else if((p1==3)&&(p2==1)){
-                i1.src = 'img/tesoura.png'
-                j1.innerText = 'Tesoura'
-                i2.src = 'img/pedra.png'
-                document.getElementById('adv').innerText = 'Pedra';
-                document.getElementById('res').innerText = 'Vc perdeu!'
-            }else{
-                i1.src = 'img/tesoura.png'
-                j1.innerText = 'Tesoura'
-                i2.src = 'img/tesoura.png'
-                document.getElementById('adv').innerText = 'Tesoura';
-                document.getElementById('res').innerText = 'Empate!'
-            }
-        }
-    </script>
+    <script src="_js/script.js"></script>
 </body>
 </html>

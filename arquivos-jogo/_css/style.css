@@ -1,0 +1,44 @@
+main{
+    display: block;
+    position: relative;
+    left: 45px;
+    text-align: center;
+}
+fieldset{
+    width: 450px;
+    height: 450px;
+    position: relative;
+    left: 420px;
+}
+fieldset legend{
+    font: normal 25pt 'Chiller';
+}
+div#jogadas{
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 100px;
+}
+div.d1{
+ float: right;
+ width: 100px;
+ height: 100px;  
+}
+div#auxiliar{
+    float: left;
+}
+div.d2{
+ float: right;
+ width: 100px;
+ height: 100px;
+ margin-left: 50px;  
+}
+div.d3{
+ float: left;
+ width: 100px;
+ height: 100px;  
+}
+figure img{
+    width: 75px;
+    height: 75px;
+}
