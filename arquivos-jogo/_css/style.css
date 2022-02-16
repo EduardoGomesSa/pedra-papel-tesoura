@@ -4,6 +4,18 @@ main{
     left: 45px;
     text-align: center;
 }
+header{
+    display: block;
+    position: relative;
+    left: 420px;
+    width: 480px;
+    height: 100px;
+    background-color: aquamarine;
+}
+header head p{
+    text-align: left;
+    font-size: 23pt;
+}
 fieldset{
     width: 450px;
     height: 450px;
