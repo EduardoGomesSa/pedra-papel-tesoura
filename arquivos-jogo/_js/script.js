@@ -10,6 +10,11 @@ function jogar(r){
     var min = Math.ceil(1);
     var max = Math.floor(4);
     var p2 = Math.floor(Math.random() * (max - min)) + min;
+    //Placar
+    var vitorias = document.getElementById('v');
+    var empates = parseInt(document.getElementById('e'));
+    var derrotas = parseInt(document.getElementById('d'));
+    var placar = 0
     //Jogada pedra
     if(player==1){
         if((player==1)&&(p2==3)){
@@ -76,5 +81,12 @@ function jogar(r){
             document.getElementById('adv').innerText = 'Tesoura';
             document.getElementById('res').innerText = 'Empate!'
         }
+    }
+    //alterando o placar
+    if(document.getElementById('res').innerText == 'Vc venceu!'){
+        placar +=1
+        vitorias.innerText = placar
+        //document.write(typeof(placar))
+        //document.write(placar)
     }
 }

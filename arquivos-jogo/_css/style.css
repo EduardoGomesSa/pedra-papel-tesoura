@@ -10,11 +10,8 @@ header{
     left: 420px;
     width: 480px;
     height: 100px;
-    background-color: aquamarine;
-}
-header head p{
+    background-color: yellow;
     text-align: left;
-    font-size: 23pt;
 }
 fieldset{
     width: 450px;
