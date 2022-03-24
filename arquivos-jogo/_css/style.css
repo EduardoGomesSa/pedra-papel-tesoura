@@ -9,8 +9,8 @@ header{
     position: relative;
     left: 420px;
     width: 480px;
-    height: 100px;
-    background-color: yellow;
+    height: 130px;
+    background-color: rgb(253, 249, 249);
     text-align: left;
 }
 fieldset{
