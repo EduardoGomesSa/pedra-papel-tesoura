@@ -83,46 +83,12 @@ function jogar(r){
         }
     }
     //alterando o placar
-         
-        var counterVal = counterVal + counter;
+         placar ++
+        var counterVal = placar;
 		    updateDisplay(counterVal);
 		
 
-		function updateDisplay(val) {
-		    document.getElementById("t").innerHTML = val;
-		}
-
-    if(document.getElementById('res').innerText == 'Vc venceu!'){
-        var counterVal = 0;
-
-        
-		    updateDisplay(++counterVal);
-		
-
-		function updateDisplay(val) {
-		    document.getElementById("v").innerHTML = val;
-		}
-    }
-    else if(document.getElementById('res').innerText == 'Empate!'){
-        var counterVal = 0;
-
-        counterVal+=1;
-		    updateDisplay(counterVal);
-		
-
-		function updateDisplay(val) {
-		    document.getElementById("e").innerHTML = val;
-		}
-    }
-    else if(document.getElementById('res').innerText == 'Vc perdeu!'){
-        var counterVal = 0;
-
-        counterVal+=1;
-		    updateDisplay(counterVal);
-		
-
-		function updateDisplay(val) {
-		    document.getElementById("d").innerHTML = val;
-        }
-    }
+}
+function updateDisplay(r){
+    document.getElementById("t").innerHTML = r;
 }
